@@ -47,4 +47,13 @@ public class UserApiController {
 		userService.setSeller(Long.parseLong(user.get("id")), user.get("role"));
 		return new ResponseDto<>(HttpStatus.OK.value(), 1);
 	}
+	@PutMapping("/api/change/admin")
+	public ResponseDto<Integer> changeAdmin(@RequestBody Map<String, String> user) {
+		userService.setAdmin(Long.parseLong(user.get("id")));
+		return new ResponseDto<>(HttpStatus.OK.value(), 1);
+	}
+
+
+
+
 }

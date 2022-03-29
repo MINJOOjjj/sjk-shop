@@ -2,8 +2,9 @@
 
 <%@ include file="layout/header.jsp" %>
 
+<link href="/css/user.css">
 <div class="container">
-
+    <h2>ㅎㅇ</h2>
 </div>
 
 <%@ include file="layout/footer.jsp" %>

@@ -20,19 +20,20 @@
             <p class="card-text">Create Date : ${date}</p>
             <c:choose>
                 <c:when test="${principal.user.role == 'ADMIN'}">
-                    <form>
-                        <input type="hidden" id="id" value="${user.id}">
-                        <select name="role">
-                            <option value="user">USER</option>
-                            <option value="seller">SELLER</option>
-                            <option value="admin">ADMIN</option>
-                        </select>
-                    </form>
-                    <br>
-                    <button id="change-role" class="btn btn-primary">Change Role</button>
+
                 </c:when>
                 <c:otherwise></c:otherwise>
             </c:choose>
+            <form>
+                                    <input type="hidden" id="id" value="${user.id}">
+                                    <select name="role">
+                                        <option value="user">USER</option>
+                                        <option value="seller">SELLER</option>
+                                        <option value="admin">ADMIN</option>
+                                    </select>
+                                </form>
+                                <br>
+                                <button id="change-role" class="btn btn-primary">Change Role</button>
         </div>
     </div>
 </div>

@@ -129,6 +129,24 @@ let index = {
             alert(JSON.stringify(error));
         });
     },
+    admin: function () {
+        let data = {
+            id: $("#id").val()
+        };
+
+        $.ajax({
+            type: "PUT",
+            url: "/api/change/admin",
+            data: JSON.stringify(data),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json"
+        }).done(function (resp) {
+            alert("Admin로 변경이 완료되었습니다.");
+            location.href = "/";
+        }).fail(function (error) {
+            alert(JSON.stringify(error));
+        });
+    },
 }
 
 index.init();

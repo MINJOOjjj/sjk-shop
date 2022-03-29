@@ -65,6 +65,9 @@
                 </c:when>
                 <c:otherwise></c:otherwise>
             </c:choose>
+            <li class="nav-item">
+               <a class="nav-link" href="/admin/management/user">Management</a>
+            </li>
         </ul>
     </div>
 </nav>

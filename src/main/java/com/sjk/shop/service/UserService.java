@@ -54,4 +54,9 @@ public class UserService {
 			.orElseThrow(() -> new IllegalArgumentException("회원 상세 보기 실패"));
 	}
 
+    public void setAdmin(Long id) {
+		User user = userRepository.findById(id)
+				.orElseThrow(() -> new IllegalArgumentException("실패"));
+		user.setRole(RoleType.ADMIN);
+    }
 }
